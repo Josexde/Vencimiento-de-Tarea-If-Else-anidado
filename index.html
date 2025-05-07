@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   <script>
+    window.onload = function () {
+      let nombre = prompt("¿Cuál es tu nombre?");
+      let pelicula = prompt("¿Qué película te gusta?").toLowerCase();
+      let r = document.getElementById("resultado");
+
+      let imagen = "";
+      let mensaje = "";
+
+      if (pelicula === "shrek") {
+        imagen = "https://elcomercio.pe/resizer/v2/OVSRQ4YQ2RF3PESEOCW6NSADHU.jpg?auth=97dc77af2438d5dcb920968d1a582b003c9afcab37488fe4ff5200129585960a&width=1200&height=1200&quality=75&smart=true";
+        mensaje = `Hola ${nombre}, ¡te gusta Shrek!`;
+      } else if (pelicula === "piratas del caribe") {
+        imagen = "https://images.justwatch.com/poster/143489674/s718/piratas-del-caribe-en-mareas-misteriosas.jpg";
+        mensaje = `Hola ${nombre}, ¡te gusta Piratas del Caribe!`;
+      } else if (pelicula === "avengers") {
+        imagen = "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg";
+        mensaje = `Hola ${nombre}, ¡te gusta Avengers!`;
+      } else if (pelicula === "sonic") {
+        imagen = "https://es.web.img3.acsta.net/c_310_420/pictures/19/11/12/12/25/0815514.jpg";
+        mensaje = `Hola ${nombre}, ¡te gusta Sonic!`;
+      } else {
+        mensaje = `No has escogido la película de Shrek, Piratas del Caribe, Avengers y Sonic`;
+      }
+
+      r.innerHTML = `<strong>${mensaje}</strong><br>`;
+      if (imagen !== "") {
+        r.innerHTML += `<img src="${imagen}" width="300">`;
+      }
+    };
+  </script>
+</head>
+<body>
+  <div id="resultado" style="font-size: 18px; padding: 20px;"></div>
+</body>
+
+
+</head> 
+</html>
